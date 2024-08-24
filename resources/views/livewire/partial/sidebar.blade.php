@@ -9,7 +9,7 @@
                 </a>
             </li>
             <li>
-                <a href="" @class(['active' => false]) wire:navigate>
+                <a href="{{ route('transaksi.create') }}" @class(['active' => Route::is('transaksi.create')]) wire:navigate>
                     <x-tabler-file-plus class="size-5" />
                     <span>Input Transaksi</span>
                 </a>
@@ -26,13 +26,13 @@
                 </a>
             </li>
             <li>
-                <a href="" @class(['active' => false]) wire:navigate>
+                <a href="{{ route('customer.index') }}" @class(['active' => Route::is('customer.index')]) wire:navigate>
                     <x-tabler-users class="size-5" />
                     <span>Data Customer</span>
                 </a>
             </li>
             <li>
-                <a href="" @class(['active' => false]) wire:navigate>
+                <a href="{{ route('transaksi.index') }}" @class(['active' => Route::is('transaksi.index')]) wire:navigate>
                     <x-tabler-file class="size-5" />
                     <span>Riwayat Transaksi</span>
                 </a>

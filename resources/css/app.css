@@ -4,41 +4,47 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    font-family: "Montserrat Alternates", sans-serif;
-    @apply font-semibold scrollbar-hide;
+@layer base {
+    html {
+        font-family: "Montserrat Alternates", sans-serif;
+        @apply font-semibold scrollbar-hide;
+    }
+    thead {
+        @apply border-b-4 border-base-300 bg-base-200/50;
+    }
 }
+@layer components {
+    .textarea-bordered,
+    .file-input-bordered,
+    .select-bordered,
+    .input-bordered {
+        @apply border-2 border-base-300;
+    }
 
-thead {
-    @apply border-b-2 border-base-300 bg-base-200/50;
-}
+    .textarea-error,
+    .file-input-error,
+    .select-error,
+    .input-error {
+        @apply border-2 border-error;
+    }
 
-.textarea-bordered,
-.file-input-bordered,
-.select-bordered,
-.input-bordered {
-    @apply border-2 border-base-300;
-}
+    .card {
+        @apply bg-base-100 border-2 border-base-300;
+    }
 
-.textarea-error,
-.file-input-error,
-.select-error,
-.input-error {
-    @apply border-2 border-error;
-}
+    .page-wrapper {
+        @apply container w-full max-w-6xl p-6 mx-auto space-y-6;
+    }
 
-.card {
-    @apply bg-base-100 border-2 border-base-300;
-}
+    .table-wrapper {
+        @apply bg-base-100 border-2 border-base-300 overflow-x-auto rounded-lg whitespace-nowrap;
+    }
 
-.page-wrapper {
-    @apply container w-full max-w-6xl p-6 mx-auto space-y-6;
-}
+    .modal-box {
+        @apply scrollbar-hide;
+    }
 
-.table-wrapper {
-    @apply bg-base-100 border-2 border-base-300 overflow-x-auto rounded-lg whitespace-nowrap;
-}
-
-.modal-box {
-    @apply scrollbar-hide;
+    .card-divider {
+        @apply divide-y-2 divide-base-300;
+    }
 }
